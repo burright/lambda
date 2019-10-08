@@ -1,0 +1,25 @@
+service: python-lab
+
+provider:
+  name: aws
+  runtime: python3.7
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+     - http:
+        path: /hello
+        method: get
+  evenoddevent:
+    handler: handler.evenoddevent
+    events:
+     - http:
+        path: /evenodd
+        method: get
+  sqrevent:
+    handler: handler.sqrevent
+    events:
+     - http:
+        path: /sqrnum
+        method: get
